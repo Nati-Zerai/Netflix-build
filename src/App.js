@@ -1,14 +1,21 @@
-import React from 'react';
-import './App.css';
-import HomeScreen from './HomeScreen';
+import React from "react";
+import "./App.css";
+import HomeScreen from "./screens/HomeScreen";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="app">
-
-      <HomeScreen />
-
-
+      <Router>
+        <Switch>
+          <Route path="/test">
+            <h1>HI there</h1>
+          </Route>
+          <Route path="/">
+            <HomeScreen />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
